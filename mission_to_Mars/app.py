@@ -26,13 +26,14 @@ def scraper():
     mars_data = scrape_mars.scrape()
 
     #Store results into a dictionary
+    print(mars_data)
     mars = {
         'news_title':mars_data['news_title'],
         'news_paragraph':mars_data['news_paragraph'],
-        'featured_image':mars_data['featured_image'],
-        'weather':mars_data['weather'],
-        'fact_table':mars_data['fact_table'],
-        'hemisphere_images':mars_data['hemisphere_images'],        
+        'featured_image':mars_data['featured_image_url'],
+        'weather':mars_data['mars_weather'],
+        'table':mars_data['table'],
+        'hemisphere_image_urls':mars_data['hemisphere_image_urls'],        
     }
    
     # Insert mars data into database
